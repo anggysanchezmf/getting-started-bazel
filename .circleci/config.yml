@@ -15,6 +15,9 @@ jobs:
               cd $CHECKOUT_DIR/unit-tests; bazel test //src/test/java/com/bmuschko/messenger:messenger-test
               cd $CHECKOUT_DIR/junit5-macro; bazel test //src/test/java/com/bmuschko/messenger:messenger-test
               cd $CHECKOUT_DIR/javadoc; bazel build //:api-docs
+      - run:
+          name: List Files
+          command: ls *      
       - store_artifacts:
           path: quickstart/bazel-bin/
           destination: artifact-file
