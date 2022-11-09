@@ -19,5 +19,8 @@ jobs:
           name: List Files
           command: ls *      
       - store_artifacts:
-          path: quickstart/bazel-bin/
+          path: external-deps/bazel-bin/src/main/java/com/bmuschko
+          destination: artifact-file
+      - store_artifacts:
+          path: external-deps/bazel-bin/src/main/java/com/bmuschko/hello-world.jar
           destination: artifact-file
